@@ -8,7 +8,7 @@ const Home = () => {
    
   return (
     <div>
-        <nav className="navbar navbar-expand-lg bg-primary-subtle w-100 d-flex justify-content-between">
+        <nav className="navbar navbar-expand-lg bg-primary-subtle w-100 d-flex justify-content-between m-auto p-2">
   <div className="container-fluid">
     <a className="navbar-brand text-white " href="#"><h4 className='text-primary-emphasis'>TeleMed</h4></a>
     </div>
@@ -34,14 +34,14 @@ const Home = () => {
 
     </div>
 </nav>
-    <div className="video-container">
+    <div className="video-container ">
         <video 
           src={MedicalShield} 
           autoPlay 
           loop 
           muted 
           playsInline 
-          className="w-50 h-50"
+          
         />
       </div>
 
