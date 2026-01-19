@@ -1,8 +1,10 @@
 import React from 'react'
-
+import './App.css'
+import MedicalShield from './assets/Medical Shield.webm'    
 
 const Home = () => {
     const numberOfVilages =  "300+"
+    
    
   return (
     <div>
@@ -12,10 +14,10 @@ const Home = () => {
     </div>
     <div className="d-flex p-2">
         <a className="nav-link text-white m-1 text-primary-emphasis" href="#">Home</a>
-        <a className="nav-link text-white m-1 text-primary-emphasis" href="#">About</a>
+        <a className="nav-link text-white m-1 text-primary-emphasis" href="<About/>">About</a>
         <a className="nav-link text-white m-1 text-primary-emphasis" href="#">Contact</a>
         <a className="nav-link text-white m-1 text-primary-emphasis" href="#">Login</a>
-        <dropdown className='p-2'>
+        <div className='p-2'>
         <button className="btn btn-primary-emphasis dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
     English
   </button>
@@ -24,12 +26,25 @@ const Home = () => {
     <li><a className="dropdown-item" href="#">English</a></li>
     <li><a className="dropdown-item" href="#">hindi</a></li>
   </ul>
-  
-        </dropdown>
+
+        </div>
+        
+
         
 
     </div>
 </nav>
+    <div className="video-container">
+        <video 
+          src={MedicalShield} 
+          autoPlay 
+          loop 
+          muted 
+          playsInline 
+          className="w-50 h-50"
+        />
+      </div>
+
     <h3 className="m-5 align-center">Innovating healthcare, <br/>connecting patients and providers.</h3>
     <p className='m-5'>Connecting rural communities  with quality<br/>
 healthcare through telemedicine, digital health records.<br/>
