@@ -50,7 +50,7 @@ const Home = () => {
       </div>
 
     <div className="m-5">
-    <h3>{t("Innovating healthcare" )}</h3>
+    <h3>{t("Innovating healthcare")}</h3>
     <h3>{t("connecting patients and providers")}</h3>
     </div>
     <p className='m-5'>Connecting rural communities  with quality<br/>
