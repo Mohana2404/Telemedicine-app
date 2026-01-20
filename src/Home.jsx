@@ -13,10 +13,10 @@ const Home = () => {
     <a className="navbar-brand text-white " href="#"><h4 className='text-primary-emphasis'>TeleMed</h4></a>
     </div>
     <div className="d-flex p-2">
-        <a className="nav-link text-white m-1 text-primary-emphasis" href="#">Home</a>
-        <a className="nav-link text-white m-1 text-primary-emphasis" href="<About/>">About</a>
-        <a className="nav-link text-white m-1 text-primary-emphasis" href="#">Contact</a>
-        <a className="nav-link text-white m-1 text-primary-emphasis" href="#">Login</a>
+        <a className="nav-link text-white m-2 text-primary-emphasis" href="#">Home</a>
+        <a className="nav-link text-white m-2 text-primary-emphasis" href="<About/>">About</a>
+        <a className="nav-link text-white m-2 text-primary-emphasis" href="#">Contact</a>
+        <a className="nav-link text-white m-2 text-primary-emphasis" href="#">Login</a>
         <div className='p-2'>
         <button className="btn btn-primary-emphasis dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
     English
@@ -29,7 +29,7 @@ const Home = () => {
 
         </div>
         
-
+{/* hello */}
         
 
     </div>
