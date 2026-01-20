@@ -55,6 +55,10 @@ and Al-powered health assistance.</p>
 <div><h3>3+<br/></h3><p>languages</p></div>
 </div>
 
+<div><button className="btn btn-color m-5 ">Login</button>
+    <button className='btn btn-outline-secondary'>learn more</button>
+
+</div>
 
 </div>
   )

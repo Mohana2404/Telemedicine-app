@@ -8,7 +8,7 @@ import Home from './Home'
 const App = () => {
   return (
     <>
-    <div className='vh-50vh'>
+    <div className='100vh'>
       <Home />
       
     </div>

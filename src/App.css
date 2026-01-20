@@ -27,3 +27,11 @@
   height: 100%;      /* fill container height */
   /* object-fit: cover; cover the container area */
 }
+.btn-color{
+    background-color:#052C65;
+    color:white;
+}
+.btn-color:hover {
+        background-color:#021634;
+        color:white;
+    };
