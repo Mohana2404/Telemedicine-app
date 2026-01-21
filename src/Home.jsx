@@ -1,8 +1,11 @@
 import React from 'react'
 import './App.css'
-import MedicalShield from './assets/Medical Shield.webm'    
+import MedicalShield from './assets/Medical Shield.webm' 
+import { useNavigate } from 'react-router-dom';
+
 
 const Home = () => {
+  const navigate = useNavigate();
     const numberOfVilages =  "300+"
     
    
@@ -14,13 +17,13 @@ const Home = () => {
     </div>
     <div className="d-flex p-2">
         <a className="nav-link text-white m-2 text-primary-emphasis" href="#">Home</a>
-        <a className="nav-link text-white m-2 text-primary-emphasis" href="<About/>">About</a>
+        <a className="nav-link text-white m-2 text-primary-emphasis" href="#">About</a>
         <a className="nav-link text-white m-2 text-primary-emphasis" href="#">Contact</a>
         <a className="nav-link text-white m-2 text-primary-emphasis" href="#">Login</a>
-        <div className='p-2'>
-        <button className="btn btn-primary-emphasis dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+        <div className='nav-item dropdown '>
+        <a className="btn btn-primary-emphasis dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
     English
-  </button>
+  </a>
     <ul className="dropdown-menu">
     <li><a className="dropdown-item" href="#">Tamil</a></li>
     <li><a className="dropdown-item" href="#">English</a></li>
@@ -58,6 +61,18 @@ and Al-powered health assistance.</p>
 <div><button className="btn btn-color m-5 ">Login</button>
     <button className='btn btn-outline-secondary'>learn more</button>
 
+</div >
+<div className='d-flex w-25 m-auto  '> 
+<div className="card text-center m-5 justify-content-center align-items-center " >
+  
+  <div className="card-body">
+    <h5 className="card-title">AI symptom checker</h5>
+    <p className="card-text">Intelligent symptom assessment providing
+preliminary guidance in local languages.</p>
+    <button className="btn btn-color " onClick={() => navigate('/chat')}>Start Chat</button>
+  </div>
+
+</div>
 </div>
 
 </div>
