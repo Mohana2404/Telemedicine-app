@@ -24,7 +24,7 @@ const Home = () => {
         <div className='p-2'>
         <button className="btn btn-primary-emphasis dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
     English
-  </button>
+  </a>
     <ul className="dropdown-menu">
     <li><a className="dropdown-item" href="#" onClick={() =>{ i18n.changeLanguage("ta");localStorage.setItem("lang","ta");}}>Tamil</a></li>
     <li><a className="dropdown-item" href="#" onClick={() =>{ i18n.changeLanguage("en");localStorage.setItem("lang","en");}}>English</a></li>
@@ -33,7 +33,7 @@ const Home = () => {
 
         </div>
         
-
+{/* hello */}
         
 
     </div>
@@ -45,7 +45,7 @@ const Home = () => {
           loop 
           muted 
           playsInline 
-          d-flex m-5 
+          
         />
       </div>
 
