@@ -16,21 +16,23 @@ const Home = () => {
   <div className="container-fluid">
     <a className="navbar-brand text-white " href="#"><h4 className='text-primary-emphasis'>TeleMed</h4></a>
     </div>
-    <div className="d-flex p-2">
-        <a className="nav-link text-white m-1 text-primary-emphasis" href="#">{t("home")}</a>
-        <a className="nav-link text-white m-1 text-primary-emphasis" href="#">{t("about")}</a>
-        <a className="nav-link text-white m-1 text-primary-emphasis" href="#">{t("contact")}</a>
-        <a className="nav-link text-white m-1 text-primary-emphasis" href="#">{t("login")}</a>
+    <div className="d-flex p-1">
+        <a className="nav-link text-white m-3 text-primary-emphasis" href="#">{t("home")}</a>
+        <a className="nav-link text-white m-3 text-primary-emphasis" href="#">{t("about")}</a>
+        <a className="nav-link text-white m-3 text-primary-emphasis" href="#">{t("contact")}</a>
+        <a className="nav-link text-white m-3 text-primary-emphasis" href="#">{t("login")}</a>
         <div className='p-2'>
-        <button className="btn btn-primary-emphasis dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <div className='dropdown'>
+        <a className="btn btn-primary-emphasis dropdown-toggle nav-item-dropdown" type="button" data-bs-toggle="dropdown" aria-expanded="false">
     English
   </a>
-    <ul className="dropdown-menu">
+
+    <ul className="dropdown-menu nav-item-dropdown">
     <li><a className="dropdown-item" href="#" onClick={() =>{ i18n.changeLanguage("ta");localStorage.setItem("lang","ta");}}>Tamil</a></li>
     <li><a className="dropdown-item" href="#" onClick={() =>{ i18n.changeLanguage("en");localStorage.setItem("lang","en");}}>English</a></li>
     <li><a className="dropdown-item" href="#" onClick={() =>{ i18n.changeLanguage("hi");localStorage.setItem("lang","hi");}}>hindi</a></li>
   </ul>
-
+</div>
         </div>
         
 {/* hello */}
