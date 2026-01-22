@@ -1,44 +1,50 @@
 import React from 'react';
 import './App.css';
-import MedicalShield from './assets/Medical Shield.webm';
+import MedicalShield from './assets/Medical Shield.webm' ;
+import { useNavigate } from 'react-router-dom';
 import { useTranslation } from "react-i18next";
-import VideoConsultation from './VideoConsultation/consultation';
 
 
 const Home = () => {
+  const navigate = useNavigate();
    const { t, i18n } = useTranslation();
    const numberOfVilages =  "300+";
-    
+
    
   return (
   
     <div>
-        <nav className="navbar navbar-expand-lg bg-primary-subtle w-100 d-flex justify-content-between m-auto p-2">
-  <div className="container-fluid">
-    <a className="navbar-brand text-white " href="#"><h4 className='text-primary-emphasis'>TeleMed</h4></a>
+      <nav className="navbar navbar-expand-lg bg-primary-subtle w-100 d-flex justify-content-between m-auto p-2">
+       <div className="container-fluid">
+        <a className="navbar-brand text-white " href="#"><h4 className='text-primary-emphasis'>TeleMed</h4></a>
     </div>
-    <div className="d-flex p-2">
-        <a className="nav-link text-white m-1 text-primary-emphasis" href="#">{t("home")}</a>
-        <a className="nav-link text-white m-1 text-primary-emphasis" href="#">{t("about")}</a>
-        <a className="nav-link text-white m-1 text-primary-emphasis" href="#">{t("contact")}</a>
-        <a className="nav-link text-white m-1 text-primary-emphasis" href="#">{t("login")}</a>
-        <div className='p-2'>
-        <button className="btn btn-primary-emphasis dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+    <div className="d-flex p-2"> 
+        <a className="nav-link text-white m-2 text-primary-emphasis" href="#">{t("home")}</a>
+        <a className="nav-link text-white m-2 text-primary-emphasis" href="#">{t("about")}</a>
+        <a className="nav-link text-white m-2 text-primary-emphasis" href="#">{t("contact")}</a>
+        <a className="nav-link text-white m-2 text-primary-emphasis" href="#">{t("login")}</a>
+        
+           <div className='nav-item dropdown '>
+        <a className="btn btn-primary-emphasis dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
     English
-  </button>
+  </a>
+  
     <ul className="dropdown-menu">
     <li><a className="dropdown-item" href="#" onClick={() =>{ i18n.changeLanguage("ta");localStorage.setItem("lang","ta");}}>Tamil</a></li>
     <li><a className="dropdown-item" href="#" onClick={() =>{ i18n.changeLanguage("en");localStorage.setItem("lang","en");}}>English</a></li>
     <li><a className="dropdown-item" href="#" onClick={() =>{ i18n.changeLanguage("hi");localStorage.setItem("lang","hi");}}>hindi</a></li>
-  </ul>
-
-        </div>
-        
-
-        
-
+    </ul>
+     </div>
+    
     </div>
+   
+   
+
 </nav>
+
+    
+
+   
     <div className="video-container ">
         <video 
           src={MedicalShield} 
@@ -46,6 +52,7 @@ const Home = () => {
           loop 
           muted 
           playsInline 
+          
           d-flex m-5 
         />
       </div>
@@ -71,17 +78,25 @@ const Home = () => {
     <button className='btn btn-outline-secondary'>{t("learnMore")}</button>
 
 </div>
- 
 
 
-<div>
-      
-      <VideoConsultation />
-    </div>
+
+
+<div className='d-flex w-25 m-auto  '> 
+<div className="card text-center m-5 justify-content-center align-items-center " >
   
+  <div className="card-body">
+    <h5 className="card-title">{t("aiSymptomChecker")}</h5>
+    <p className="card-text">{t("intelligentSymptomAssessment")}</p>
+    <button className="btn btn-color " onClick={() => navigate('/chat')}>{t("startChat")}</button>
+  </div>
+
+</div>
 </div>
 
-  )
+ </div>
+);
 }
 
-export default Home
+export default Home;
+
