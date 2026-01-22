@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import MedicalShield from './assets/Medical Shield.webm';
 import { useTranslation } from "react-i18next";
+import VideoConsultation from './VideoConsultation/consultation';
 
 
 const Home = () => {
@@ -50,25 +51,35 @@ const Home = () => {
       </div>
 
     <div className="m-5">
-    <h3>{t("Innovating healthcare")}</h3>
-    <h3>{t("connecting patients and providers")}</h3>
+    <h3 className="responsive-text">{t("innovatingHealthcare")}</h3>
+    <h3 className="responsive-text">{t("connectingPatientsProviders")}</h3>
     </div>
-    <p className='m-5'>Connecting rural communities  with quality<br/>
-healthcare through telemedicine, digital health records.<br/>
-and Al-powered health assistance.</p>
+   <div className="m-5">
+   <p className="responsive-text">{t('ruralLineOne')}<br/>{t('ruralLineTwo')}<br/>
+   {t('ruralLineThree')}</p><br/>
+   </div>
+   
+   
+   
 <div className='d-flex m-5 p-10 gap-5'>
-<div><h3>{numberOfVilages}<br/></h3><p>villages served </p></div>
-<div><h3>24/7<br/></h3><p>healthcare Access</p></div>
-<div><h3>3+<br/></h3><p>languages</p></div>
+<div><h3>{numberOfVilages}<br/></h3><p>{t("villagesServed")} </p></div>
+<div><h3>24/7<br/></h3><p>{t("healthcareAccess")}</p></div>
+<div><h3>3+<br/></h3><p>{t("languages")}</p></div>
 </div>
 
-<div><button className="btn btn-color m-5 ">Login</button>
-    <button className='btn btn-outline-secondary'>learn more</button>
+<div><button className="btn btn-color m-5 ">{t("login")}</button>
+    <button className='btn btn-outline-secondary'>{t("learnMore")}</button>
 
 </div>
+ 
 
+
+<div>
+      
+      <VideoConsultation />
+    </div>
+  
 </div>
-
 
   )
 }

@@ -26,3 +26,30 @@
   height: 100%; */
   object-fit: cover; /* ensures video covers the area */
 }
+
+.responsive-text {
+  max-width: 600px;   /* limits how wide the text can go */
+  word-wrap: break-word;
+  word-break: break-word;
+  white-space: normal;
+}
+/* VideoConsultation.css */
+.video-container {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 5px;
+}
+
+.local-video, .remote-video {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.controls button {
+  padding: 10px 20px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+

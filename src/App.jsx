@@ -6,6 +6,7 @@ import Home from './Home';
 
 
 
+
 const App = () => {
   const{t}=useTranslation();
   return (
@@ -15,10 +16,7 @@ const App = () => {
       
     </div>
     
-
-
-   
     </div>
-  )}
+  );}
 
 export default App
