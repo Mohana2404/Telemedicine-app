@@ -26,8 +26,10 @@ const Home = () => {
         
            <div className='nav-item dropdown '>
         <a className="btn btn-primary-emphasis dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+
     English
-  </a>
+    </a>
+  
   
     <ul className="dropdown-menu">
     <li><a className="dropdown-item" href="#" onClick={() =>{ i18n.changeLanguage("ta");localStorage.setItem("lang","ta");}}>Tamil</a></li>
@@ -53,7 +55,7 @@ const Home = () => {
           muted 
           playsInline 
           
-          d-flex m-5 
+
         />
       </div>
 
@@ -74,6 +76,7 @@ const Home = () => {
 <div><h3>3+<br/></h3><p>{t("languages")}</p></div>
 </div>
 
+
 <div><button className="btn btn-color m-5 ">{t("login")}</button>
     <button className='btn btn-outline-secondary'>{t("learnMore")}</button>
 
@@ -93,7 +96,11 @@ const Home = () => {
 
 </div>
 </div>
+<div><button className="btn btn-color m-5 ">Login</button>
+    <button className='btn btn-outline-secondary'>learn more</button>
 
+
+ </div>
  </div>
 );
 }
