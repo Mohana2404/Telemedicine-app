@@ -4,8 +4,10 @@ import { createRoot } from 'react-dom/client'
 import App from './App.jsx';
 import "./i18n";
 
+
 import './index.css'
 
+import App from './App.jsx'
 import {createBrowserRouter,RouterProvider} from 'react-router-dom'
 import Chat from './Chat.jsx'
 

@@ -1,24 +1,23 @@
 
 import React from 'react';
-import { useTranslation } from "react-i18next";
 import './App.css';
 import Home from './Home';
+import { useTranslation } from "react-i18next";
 
 
 
 const App = () => {
   const{t}=useTranslation();
   return (
-    <div>
-    <div className='vh-100'>
-      <Home />
-      
-    </div>
+  
     
-
-
+    <div className='vh-100'>
+      <div>
+      <Home />
+     </div>
+     </div>
+     
    
-    </div>
-  )}
+  );}
 
 export default App

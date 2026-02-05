@@ -1,11 +1,13 @@
 import React from 'react';
 import './App.css';
-import MedicalShield from './assets/Medical Shield.webm';
+import MedicalShield from './assets/Medical Shield.webm' ;
+import { useNavigate } from 'react-router-dom';
 import { useTranslation } from "react-i18next";
 import { useNavigate } from 'react-router-dom';
 
 
 const Home = () => {
+  const navigate = useNavigate();
    const { t, i18n } = useTranslation();
    const numberOfVilages =  "300+";
     const navigate = useNavigate();
@@ -14,9 +16,9 @@ const Home = () => {
   return (
   
     <div>
-        <nav className="navbar navbar-expand-lg bg-primary-subtle w-100 d-flex justify-content-between m-auto p-2">
-  <div className="container-fluid">
-    <a className="navbar-brand text-white " href="#"><h4 className='text-primary-emphasis'>TeleMed</h4></a>
+      <nav className="navbar navbar-expand-lg bg-primary-subtle w-100 d-flex justify-content-between m-auto p-2">
+       <div className="container-fluid">
+        <a className="navbar-brand text-white " href="#"><h4 className='text-primary-emphasis'>TeleMed</h4></a>
     </div>
     <div className="d-flex p-1">
         <a className="nav-link text-white m-3 text-primary-emphasis" href="#">{t("home")}</a>
@@ -40,9 +42,8 @@ const Home = () => {
 {/* hello */}
         
 
-    </div>
 </nav>
-    <div className="video-container .d-none .d-lg-block .d-xl-none">
+    <div className="video-container ">
         <video 
           src={MedicalShield} 
           autoPlay 
@@ -50,45 +51,57 @@ const Home = () => {
           muted 
           playsInline 
           
+
         />
       </div>
 
     <div className="m-5">
-    <h3>{t("Innovating healthcare")}</h3>
-    <h3>{t("connecting patients and providers")}</h3>
+    <h3 className="responsive-text">{t("innovatingHealthcare")}</h3>
+    <h3 className="responsive-text">{t("connectingPatientsProviders")}</h3>
     </div>
-    <p className='m-5'>Connecting rural communities  with quality<br/>
-healthcare through telemedicine, digital health records.<br/>
-and Al-powered health assistance.</p>
+   <div className="m-5">
+   <p className="responsive-text">{t('ruralLineOne')}<br/>{t('ruralLineTwo')}<br/>
+   {t('ruralLineThree')}</p><br/>
+   </div>
+   
+   
+   
 <div className='d-flex m-5 p-10 gap-5'>
-<div><h3>{numberOfVilages}<br/></h3><p>villages served </p></div>
-<div><h3>24/7<br/></h3><p>healthcare Access</p></div>
-<div><h3>3+<br/></h3><p>languages</p></div>
+<div><h3>{numberOfVilages}<br/></h3><p>{t("villagesServed")} </p></div>
+<div><h3>24/7<br/></h3><p>{t("healthcareAccess")}</p></div>
+<div><h3>3+<br/></h3><p>{t("languages")}</p></div>
 </div>
 
-<div><button className="btn btn-color m-5 ">Login</button>
-    <button className='btn btn-outline-secondary'>learn more</button>
+
+<div><button className="btn btn-color m-5 ">{t("login")}</button>
+    <button className='btn btn-outline-secondary'>{t("learnMore")}</button>
 
 </div>
-<div className='d-flex  m-4'  > 
-<div className="card w-25 text-center m-5 justify-content-center align-items-center fixed" >
+
+
+
+
+<div className='d-flex w-25 m-auto  '> 
+<div className="card text-center m-5 justify-content-center align-items-center " >
   
-  <div className="card-body ">
-    <h5 className="card-title">AI symptom checker</h5>
-    <p className="card-text">Intelligent symptom assessment providing
-preliminary guidance in local languages.</p>
-    <button className="btn btn-color " onClick={() => navigate('/chat')}>Start Chat</button>
+  <div className="card-body">
+    <h5 className="card-title">{t("aiSymptomChecker")}</h5>
+    <p className="card-text">{t("intelligentSymptomAssessment")}</p>
+    <button className="btn btn-color " onClick={() => navigate('/chat')}>{t("startChat")}</button>
   </div>
 
 </div>
 </div>
+<div><button className="btn btn-color m-5 ">Login</button>
+    <button className='btn btn-outline-secondary'>learn more</button>
 
 </div>
 
-
+</div>
 
 
   )
 }
 
-export default Home
+export default Home;
+
