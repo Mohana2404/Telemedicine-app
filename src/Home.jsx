@@ -2,11 +2,13 @@ import React from 'react';
 import './App.css';
 import MedicalShield from './assets/Medical Shield.webm';
 import { useTranslation } from "react-i18next";
+import { useNavigate } from 'react-router-dom';
 
 
 const Home = () => {
    const { t, i18n } = useTranslation();
    const numberOfVilages =  "300+";
+    const navigate = useNavigate();
     
    
   return (
@@ -40,7 +42,7 @@ const Home = () => {
 
     </div>
 </nav>
-    <div className="video-container ">
+    <div className="video-container .d-none .d-lg-block .d-xl-none">
         <video 
           src={MedicalShield} 
           autoPlay 
@@ -68,8 +70,22 @@ and Al-powered health assistance.</p>
     <button className='btn btn-outline-secondary'>learn more</button>
 
 </div>
+<div className='d-flex  m-4'  > 
+<div className="card w-25 text-center m-5 justify-content-center align-items-center fixed" >
+  
+  <div className="card-body ">
+    <h5 className="card-title">AI symptom checker</h5>
+    <p className="card-text">Intelligent symptom assessment providing
+preliminary guidance in local languages.</p>
+    <button className="btn btn-color " onClick={() => navigate('/chat')}>Start Chat</button>
+  </div>
 
 </div>
+</div>
+
+</div>
+
+
 
 
   )
