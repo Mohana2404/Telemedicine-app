@@ -3,14 +3,14 @@ import './App.css';
 import MedicalShield from './assets/Medical Shield.webm' ;
 import { useNavigate } from 'react-router-dom';
 import { useTranslation } from "react-i18next";
-import { useNavigate } from 'react-router-dom';
+
 
 
 const Home = () => {
   const navigate = useNavigate();
    const { t, i18n } = useTranslation();
    const numberOfVilages =  "300+";
-    const navigate = useNavigate();
+   
     
    
   return (
@@ -25,6 +25,7 @@ const Home = () => {
         <a className="nav-link text-white m-3 text-primary-emphasis" href="#">{t("about")}</a>
         <a className="nav-link text-white m-3 text-primary-emphasis" href="#">{t("contact")}</a>
         <a className="nav-link text-white m-3 text-primary-emphasis" href="#">{t("login")}</a>
+    </div>
         <div className='p-2'>
           <div className='dropdown'>
         <a className="btn btn-primary-emphasis dropdown-toggle nav-item-dropdown" type="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -43,8 +44,8 @@ const Home = () => {
         
 
 </nav>
-    <div className="video-container ">
-        <video 
+    <div className="m-auto d-none d-sm-none d-md-block " >
+        <video className='video-container' 
           src={MedicalShield} 
           autoPlay 
           loop 
@@ -92,15 +93,12 @@ const Home = () => {
 
 </div>
 </div>
-<div><button className="btn btn-color m-5 ">Login</button>
-    <button className='btn btn-outline-secondary'>learn more</button>
 
-</div>
 
 </div>
 
 
-  )
+  );
 }
 
 export default Home;
