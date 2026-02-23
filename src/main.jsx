@@ -9,6 +9,7 @@ import './index.css'
 import App from './App.jsx'
 import {createBrowserRouter,RouterProvider} from 'react-router-dom'
 import Chat from './Chat.jsx'
+import PharmacyPage from './PharmacyPage.jsx';
 
 const router = createBrowserRouter([
   {
@@ -18,6 +19,10 @@ const router = createBrowserRouter([
   {
     path:"/chat",
     element:<Chat/>
+  },
+  {
+    path:"/pharmacy",
+    element:<PharmacyPage/>
   }
 ])
 

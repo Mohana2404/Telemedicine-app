@@ -4,15 +4,15 @@
   "about": "के बारे में",
   "contact": "संपर्क",
   "login": "लॉगिन",
-   "connectingPatientsProviders": "रोगियों और प्रदाताओं को जोड़ना",
+  "connectingPatientsProviders": "रोगियों और प्रदाताओं को जोड़ना",
   "languages": "भाषाएँ",
   "healthcareAccess": "स्वास्थ्य सेवा पहुँच",
   "villagesServed": "सेवा किए गए गाँव",
-  "ruralLineOne":"ग्रामीण समुदायों को गुणवत्तापूर्ण स्वास्थ्य सेवा से जोड़ना",
-  "ruralLineTwo":"टेलीमेडिसिन और डिजिटल स्वास्थ्य रिकॉर्ड के माध्यम से",
-  "ruralLineThree":"और एआई-संचालित स्वास्थ्य सहायता",
+  "ruralLineOne": "ग्रामीण समुदायों को गुणवत्तापूर्ण स्वास्थ्य सेवा से जोड़ना",
+  "ruralLineTwo": "टेलीमेडिसिन और डिजिटल स्वास्थ्य रिकॉर्ड के माध्यम से",
+  "ruralLineThree": "और एआई-संचालित स्वास्थ्य सहायता",
   "aiSymptomChecker": "एआई लक्षण मूल्यांकन",
-   "startChat": "चैट शुरू करें",
+  "startChat": "चैट शुरू करें",
   "intelligentSymptomAssessment": "स्थानीय भाषाओं में प्रारंभिक मार्गदर्शन प्रदान करने वाला बुद्धिमान लक्षण मूल्यांकन",
   "healthcare_comes_to_you": "सुलभ स्वास्थ्य सेवाएं",
   "learnMore": "अधिक जानकारी",
@@ -21,5 +21,6 @@
   "medicine_availability": "दवाओं की उपलब्धता",
   "blood_slots": "रक्तदान उपलब्धता",
   "ai_symptoms_checker": "AI आधारित लक्षण मूल्यांकन",
-  "ai_voice_assistant": "AI चिकित्सा वॉइस असिस्टेंट"
+  "ai_voice_assistant": "AI चिकित्सा वॉइस असिस्टेंट",
+  "Pharmacy": "फार्मेसी"
 }

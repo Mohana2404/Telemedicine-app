@@ -21,5 +21,6 @@
   "medicine_availability": "Medication Availability",
   "blood_slots": "Blood Donation Availability",
   "ai_symptoms_checker": "AI-Based Symptom Assessment",
-  "ai_voice_assistant": "AI Clinical Voice Assistant"
+  "ai_voice_assistant": "AI Clinical Voice Assistant",
+  "Pharmacy": "Pharmacy"
 }
